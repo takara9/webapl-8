@@ -1,15 +1,24 @@
-# oAuth2認証サーバーの開発
+# oAuth2認証サーバー
 
-Istioの認証に対応する oAuth2サーバーを開発する。
+Istioの認証に対応する oAuth2サーバー
 
 * ユーザー登録と削除
 * ログイン処理 認証してJWTトークンを返す
 * JWKSデータを返す
 
-
 JWTトークンは、HTTPヘッダーの"Authorization: Bearer ${TOKEN}"で返すので、
 ブラウザでアクセスする場合は、JavaScript で Header をコピーして、
 次の送信のヘッダーへコピーする。
+
+
+## Docker Hub
+
+Docker Hub のリポジトリは、次のリンクになる。
+* https://hub.docker.com/repository/docker/maho/oauth-server
+
+~~~
+docker pull maho/oauth-server:0.2
+~~~
 
 
 ## デプロイ
